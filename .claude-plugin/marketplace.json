@@ -1,0 +1,13 @@
+{
+  "name": "econ-theory-skills",
+  "owner": {
+    "name": "Chiara Lattanzio"
+  },
+  "plugins": [
+    {
+      "name": "econ-theory",
+      "source": "./plugins/econ-theory",
+      "description": "Skills for building, checking and writing up economic and finance theory models."
+    }
+  ]
+}
