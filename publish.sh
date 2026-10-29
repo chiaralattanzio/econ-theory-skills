@@ -29,10 +29,10 @@ new_version=$(echo "$version" | awk -F. '{print $1"."$2"."$3+1}')
 sed -i '' "s/\"version\": \"$version\"/\"version\": \"$new_version\"/" "$PLUGIN"
 
 message="Update skills to $new_version"
-[ ${#changed[@]} -gt 0 ] && message="$message: ${changed[*]}"
+if [ ${#changed[@]} -gt 0 ]; then message="$message: ${changed[*]}"; fi
 
 git add -A
 git commit -q -m "$message"
 git push -q
 echo "Published version $new_version to GitHub."
-[ ${#changed[@]} -gt 0 ] && echo "Updated skills: ${changed[*]}"
+if [ ${#changed[@]} -gt 0 ]; then echo "Updated skills: ${changed[*]}"; fi
