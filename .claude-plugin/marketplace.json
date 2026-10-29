@@ -1,5 +1,6 @@
 {
   "name": "econ-theory-skills",
+  "description": "Claude skills for building, checking and writing up economic and finance theory models.",
   "owner": {
     "name": "Chiara Lattanzio"
   },
